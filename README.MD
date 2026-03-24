@@ -32,6 +32,7 @@ En value se agrega el numero desde el cual se quiere calcular la conjetura
 
 Esto despues d eagregarlo al a instnacia se eejcuta dentro de la carpeta
 ![alt text](<Images/ejecucion server ec2.png>)
+![alt text](<Images/Prueba en EC2.png>)
 
 
 
