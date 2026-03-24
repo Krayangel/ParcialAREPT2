@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Collatz Sequence Tester</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Collatz Sequence Tester</h1>
+    <form>
+        <label for="number">Enter a positive integer:</label><br>
+        <input type="number" id="number" name="number" min="1" value="5"><br><br>
+        <input type="button" value="Submit" onclick="getCollatzSequence()">
+    </form>
+    <div id="response"></div>
+
+    <script>
+        function getCollatzSequence() {
+            let number = document.getElementById("number").value;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("response").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "/math/collatz?value=" + number);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

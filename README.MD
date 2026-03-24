@@ -34,6 +34,7 @@ Esto despues d eagregarlo al a instnacia se eejcuta dentro de la carpeta
 ![alt text](<Images/ejecucion server ec2.png>)
 ![alt text](<Images/Prueba en EC2.png>)
 
+Video: https://pruebacorreoescuelaingeduco-my.sharepoint.com/?view=8&photosData=%2Fphoto%2F01ZBAKNLDFXCM226DPNVEI4GXITBGFTDXN%3Fview%3Dall
 
 
 
