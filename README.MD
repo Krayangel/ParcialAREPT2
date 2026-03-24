@@ -16,9 +16,25 @@ Por ejemplo, dato el número k=13
 
 13→40→20→10→5→16→8→4→2→1
 
+## Arch
+
+![alt text](Images/arch.png)
+
 ## Endpoints principales
 
 http://localhost:8080/math/collatz?value=7
+
+En value se agrega el numero desde el cual se quiere calcular la conjetura
+![alt text](<Images/Prueba base postman.png>)
+![alt text](<Images/Prueba adicional.png>)
+
+## Ejecucion en EC2
+
+Esto despues d eagregarlo al a instnacia se eejcuta dentro de la carpeta
+![alt text](<Images/ejecucion server ec2.png>)
+
+
+
 
 
 
