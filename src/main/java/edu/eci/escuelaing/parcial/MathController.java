@@ -12,7 +12,7 @@ import java.util.List;
 public class MathController {
 
     @GetMapping("/collatz")
-    public List<Integer> collatz(@RequestParam int value) {
+    public CollatzResponse collatz(@RequestParam int value) {
         if (value <= 0) {
             throw new IllegalArgumentException("El número debe ser un entero positivo.");
         }
@@ -29,7 +29,9 @@ public class MathController {
             sequence.add(value);
         }
 
-        return sequence;
+        String output = String.join(" -> ", sequence.stream().map(String::valueOf).toArray(String[]::new));
+
+        return new CollatzResponse("collatzsequence", sequence.get(0), output);
     }
 
     @GetMapping("/sum")
@@ -41,5 +43,29 @@ public class MathController {
     public double div(@RequestParam double a, @RequestParam double b) {
         if (b == 0) throw new ArithmeticException("División por cero no permitida");
         return a / b;
+    }
+
+    public static class CollatzResponse {
+        private String operation;
+        private int input;
+        private String output;
+
+        public CollatzResponse(String operation, int input, String output) {
+            this.operation = operation;
+            this.input = input;
+            this.output = output;
+        }
+
+        public String getOperation() {
+            return operation;
+        }
+
+        public int getInput() {
+            return input;
+        }
+
+        public String getOutput() {
+            return output;
+        }
     }
 }
